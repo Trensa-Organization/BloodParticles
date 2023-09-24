@@ -20,15 +20,13 @@ public class Commands implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sdr, Command cmd, String str, String[] args)
     {
+        if (!(sdr instanceof Player)) {
+            sdr.sendMessage("This command can only be run by players.");
+            return false;
+        }
         Player p = (Player) sdr;
         //Gets config String.
-        String prefix = "§7[§9EXA§7]§r ";
-
-    if(!(sdr instanceof Player))
-    {
-        sdr.sendMessage("Owo what you dowing?");
-        return false;
-    }
+        String prefix = "§7[§cBP§7]§r ";
 
     if(args.length == 0)
     {
@@ -52,23 +50,11 @@ public class Commands implements CommandExecutor {
         if(args[0].equalsIgnoreCase("help"))
         {
             p.sendMessage(Color( ""));
-            p.sendMessage(Color("&8&m+-----------=*&c&9Extramentals Help&8&m*=-----------+"));
+            p.sendMessage(Color("&8&m+-----------=*&c&9BloodParticles Help&8&m*=-----------+"));
             p.sendMessage(Color("   "));
-            p.sendMessage(Color("&7/ec to open enderchest."));
-            p.sendMessage(Color("   "));
-            p.sendMessage(Color("&7/dc to get the Discord Link."));
+            p.sendMessage(Color("&7/bp Info to get Info about the plugin."));
             p.sendMessage(Color("  "));
-            p.sendMessage(Color("&7/gm to switch gamemode"));
-            p.sendMessage(Color("  "));
-            p.sendMessage(Color("&7/heal to heal yourself"));
-            p.sendMessage(Color("  "));
-            p.sendMessage(Color("&7/feed to feed yourself"));
-            p.sendMessage(Color("  "));
-            p.sendMessage(Color("&7/points to get your mob points."));
-            p.sendMessage(Color("  "));
-            p.sendMessage(Color("&7/EXA Info to get Info about the plugin."));
-            p.sendMessage(Color("  "));
-            p.sendMessage(Color("&7/EXA help to get this Message."));
+            p.sendMessage(Color("&7/bp help to get this Message."));
             p.sendMessage(Color("  "));
             p.sendMessage(Color( "&8&m+-----------=* &9&l=+=*-==-*=+=&8&m *=-----------+"));
             p.sendMessage(Color( ""));
