@@ -1,0 +1,10 @@
+name: BloodParticles
+version: '2.0-SNAPSHOT'
+main: me.dragontos.bloodparticles.BloodParticles
+api-version: '1.19'
+commands:
+  BloodParticles:
+    subcommands:
+      help:
+      info:
+  bp:
