@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="BloodParticles:jar">
-    <output-path>$USER_HOME$/media/ssd/server/server-1.19/plugins</output-path>
-    <root id="archive" name="BloodParticles.jar">
-      <element id="module-output" name="BloodParticles" />
-    </root>
-  </artifact>
-</component>
